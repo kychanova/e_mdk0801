@@ -2,9 +2,58 @@
  <head><title>Hello World</title></head>
  <body>
     <script type="text/javascript">
-        a = 'world';
-        document.write(`Hello, ${a} <br>`);
-        document.write('Hello, ${a} <br>');
+      let first = Number(prompt("Введите первое число:"))
+      let second = Number(prompt("Введите второе число:"))
+      let op = prompt("Введите знак операции:")
+
+
+      // && - "и" - истинными должны быть оба условия одновременно
+      // || - "или" - истинным должно быть хотя бы одно из условий
+      let res;
+      if (isNaN(first)  || isNaN(second)){
+        res = "Вы ввели не число"
+      }
+      else{
+        switch(op){
+          case "+": 
+            res = first + second
+            break
+          case "-":
+            res = first - second
+            break
+          case "*":
+            res = first * second
+            break
+          case "/":
+            res = first / second
+            break
+          default:
+            res = "Такого оператора я не знаю"
+            break
+        }
+
+        // if (op == "+"){
+        // res = first + second;
+        // }
+        // else if (op == "-"){
+        //   res = first - second;
+        // }
+        // else if (op == "*"){
+        //   res = first * second;
+        // }
+        // else if (op == "/"){
+        //   res = first / second;
+        // }
+        // else{
+        //   res = "Такого оператора я не знаю"
+        // }
+      }
+      alert(res)
+
+      // let age = prompt('Сколько вам лет?', '');
+      // let accessAllowed = (age>18) ? 'доступ есть' : 'доступа нет';
+      // alert(accessAllowed);
+
    </script>
  </body>
 </html>
